@@ -1,5 +1,10 @@
 # Neurology Intelligence Agent
 
+
+![Architecture Infographic](docs/images/infographic.jpg)
+
+*Source: [neurology-intelligence-agent](https://github.com/ajones1923/neurology-intelligence-agent)*
+
 RAG-powered neurology clinical decision support system for the HCLS AI Factory.
 
 ## Features
