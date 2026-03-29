@@ -12,10 +12,9 @@ Date: March 2026
 import json
 import uuid
 from datetime import datetime, timezone
-from typing import Dict, List, Optional
+from typing import Optional
 
 from fastapi import APIRouter, HTTPException, Request
-from fastapi.responses import JSONResponse, PlainTextResponse
 from loguru import logger
 from pydantic import BaseModel, Field
 
@@ -66,7 +65,7 @@ def _generate_markdown_header(title: str, patient_id: Optional[str] = None, enco
         f"# {title}",
         "",
         f"**Generated:** {now}",
-        f"**Agent:** Neurology Intelligence Agent v1.0.0",
+        "**Agent:** Neurology Intelligence Agent v1.0.0",
     ]
     if patient_id:
         lines.append(f"**Patient ID:** {patient_id}")

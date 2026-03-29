@@ -13,7 +13,6 @@ WorkflowEngine for unified dispatch.
 from __future__ import annotations
 
 import logging
-import math
 from abc import ABC, abstractmethod
 from datetime import datetime, timezone
 from typing import Dict, List, Optional
@@ -22,30 +21,21 @@ from src.clinical_scales import (
     ALSFRSCalculator,
     ASPECTSCalculator,
     EDSSCalculator,
-    GCSCalculator,
     HIT6Calculator,
     HoehnYahrCalculator,
     MoCACalculator,
-    mRSCalculator,
     NIHSSCalculator,
     UPDRSCalculator,
 )
 from src.models import (
-    ATNStage,
-    ClinicalScaleType,
     DementiaSubtype,
-    DMTCategory,
-    EpilepsySyndrome,
     HeadacheType,
-    MSPhenotype,
     NeuroDomain,
     NeuroWorkflowType,
     NMJPattern,
     ParkinsonsSubtype,
     ScaleResult,
-    SeizureType,
     SeverityLevel,
-    StrokeType,
     TumorGrade,
     TumorMolecularMarker,
     WorkflowResult,
@@ -897,7 +887,7 @@ class EpilepsyFocusWorkflow(BaseNeuroWorkflow):
         if concordance_zones:
             findings.append(f"Concordance matrix: {concordance_zones}")
             # Check if all zones agree
-            unique_zones = set(
+            set(
                 v.lower().replace("left ", "").replace("right ", "")
                 for v in concordance_zones.values()
             )
@@ -1822,7 +1812,7 @@ class HeadacheClassificationWorkflow(BaseNeuroWorkflow):
         severity = SeverityLevel.MODERATE
 
         hf = inputs.get("headache_features", {})
-        age = inputs.get("age", 0)
+        inputs.get("age", 0)
 
         # -- SNOOP red flags --
         red_flags = inputs.get("red_flags", [])
@@ -1982,7 +1972,7 @@ class HeadacheClassificationWorkflow(BaseNeuroWorkflow):
             ])
 
         # -- Preventive candidacy --
-        current_prev = inputs.get("current_preventives", [])
+        inputs.get("current_preventives", [])
         num_failed = inputs.get("num_failed_preventives", 0)
 
         preventive_indicated = (
@@ -2117,7 +2107,7 @@ class NeuromuscularEvaluationWorkflow(BaseNeuroWorkflow):
         differentials: List[str] = []
 
         motor_cv = emg.get("motor_cv", [])
-        sensory_cv = emg.get("sensory_cv", [])
+        emg.get("sensory_cv", [])
         fibs = emg.get("fibrillations", False)
         fascs = emg.get("fasciculations", False)
         psw = emg.get("positive_sharp_waves", False)

@@ -11,7 +11,7 @@ Author: Adam Jones
 Date: March 2026
 """
 
-from typing import Dict, List, Optional
+from typing import List, Optional
 
 from fastapi import APIRouter, HTTPException, Request
 from loguru import logger
@@ -20,17 +20,6 @@ from pydantic import BaseModel, Field
 from src.models import (
     NeuroWorkflowType,
     ClinicalScaleType,
-    SeverityLevel,
-    StrokeType,
-    DementiaSubtype,
-    SeizureType,
-    EpilepsySyndrome,
-    TumorGrade,
-    TumorMolecularMarker,
-    MSPhenotype,
-    ParkinsonsSubtype,
-    HeadacheType,
-    NMJPattern,
 )
 from src.knowledge import KNOWLEDGE_VERSION
 
@@ -556,8 +545,8 @@ def _calculate_updrs(items: dict) -> dict:
         severity, category = "Severe motor impairment", "severe"
 
     # Determine motor subtype from item patterns
-    tremor_items = sum(int(items.get(k, 0)) for k in ["3.15a", "3.15b", "3.16a", "3.16b", "3.17a", "3.17b", "3.17c", "3.17d", "3.17e", "3.18"] if k in items)
-    pigd_items = sum(int(items.get(k, 0)) for k in ["3.10", "3.11", "3.12", "3.13"] if k in items)
+    sum(int(items.get(k, 0)) for k in ["3.15a", "3.15b", "3.16a", "3.16b", "3.17a", "3.17b", "3.17c", "3.17d", "3.17e", "3.18"] if k in items)
+    sum(int(items.get(k, 0)) for k in ["3.10", "3.11", "3.12", "3.13"] if k in items)
 
     recs = []
     if total > 32:
@@ -1663,7 +1652,7 @@ async def headache_classify(request: HeadacheClassifyRequest, req: Request):
     """Headache classification per ICHD-3 criteria with treatment guidance."""
     _increment_metric(req, "workflow_requests_total")
 
-    desc = request.headache_description.lower()
+    request.headache_description.lower()
     symptoms = [s.lower() for s in request.associated_symptoms]
 
     # Classify headache type

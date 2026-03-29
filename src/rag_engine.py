@@ -31,16 +31,13 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from typing import Any, Dict, Generator, List, Optional, Tuple
+from typing import Any, Dict, List, Optional
 
 from config.settings import settings
 
 from .agent import (
     NEURO_SYSTEM_PROMPT,
     WORKFLOW_COLLECTION_BOOST,
-    NEURO_CONDITIONS,
-    NEURO_BIOMARKERS,
-    NEURO_DRUGS,
     NeuroWorkflowType,
     NeuroResponse,
 )

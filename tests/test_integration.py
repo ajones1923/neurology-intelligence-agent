@@ -7,23 +7,15 @@ Author: Adam Jones
 Date: March 2026
 """
 
-import pytest
 
 from src.models import (
     ClinicalScaleType,
     NeuroWorkflowType,
-    SeverityLevel,
-    ScaleResult,
-    WorkflowResult,
 )
 from src.knowledge import (
     CLINICAL_SCALES,
-    NEURO_DOMAINS,
-    NEURO_DRUGS,
-    NEURO_GENES,
 )
 from src.collections import (
-    ALL_COLLECTIONS,
     WORKFLOW_COLLECTION_WEIGHTS,
     get_all_collection_names,
 )

@@ -31,10 +31,6 @@ from typing import Any, Dict, List, Optional
 # Import metrics (always available -- stubs if prometheus_client missing)
 from .metrics import (
     INGEST_ERRORS,
-    INGEST_LATENCY,
-    INGEST_RECORDS,
-    INGEST_TOTAL,
-    LAST_INGEST,
     MetricsCollector,
 )
 

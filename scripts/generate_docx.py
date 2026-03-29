@@ -36,9 +36,9 @@ def generate_report(output_path: str = "neurology_agent_report.docx"):
         _generate_text_report(output_path.replace(".docx", ".txt"))
         return
 
-    from src.ingest.pubmed_neuro_parser import get_landmark_paper_count, get_paper_domains
-    from src.ingest.neuroimaging_parser import get_neuroimaging_protocol_count, get_imaging_modalities
-    from src.ingest.eeg_parser import get_eeg_pattern_count, get_eeg_categories
+    from src.ingest.pubmed_neuro_parser import get_landmark_paper_count
+    from src.ingest.neuroimaging_parser import get_neuroimaging_protocol_count
+    from src.ingest.eeg_parser import get_eeg_pattern_count
     from src.models import NeuroWorkflowType, ClinicalScaleType
 
     doc = Document()

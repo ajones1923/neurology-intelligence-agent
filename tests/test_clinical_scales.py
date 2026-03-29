@@ -7,7 +7,6 @@ Author: Adam Jones
 Date: March 2026
 """
 
-import pytest
 
 from src.models import ClinicalScaleType, ScaleResult
 from src.knowledge import CLINICAL_SCALES
