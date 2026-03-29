@@ -337,5 +337,5 @@ The neurology agent provides specialized support for neurotoxicity in pediatric 
 
 ---
 
-*Neurology Intelligence Agent -- Project Bible v1.0.0*
+*Neurology Intelligence Agent -- Project Bible v1.3.0*
 *HCLS AI Factory / GTC Europe 2026*

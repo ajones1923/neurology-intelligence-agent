@@ -1268,6 +1268,6 @@ Issues identified during development and testing, with severity classification a
 
 ---
 
-*Neurology Intelligence Agent v1.0.0 -- Production Readiness Report*
+*Neurology Intelligence Agent v1.3.0 -- Production Readiness Report*
 *HCLS AI Factory / GTC Europe 2026*
 *Author: Adam Jones -- March 2026*

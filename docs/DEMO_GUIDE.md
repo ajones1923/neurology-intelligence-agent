@@ -276,5 +276,5 @@ Via Streamlit:
 
 ---
 
-*Neurology Intelligence Agent -- Demo Guide v1.0.0*
+*Neurology Intelligence Agent -- Demo Guide v1.3.0*
 *HCLS AI Factory / GTC Europe 2026*

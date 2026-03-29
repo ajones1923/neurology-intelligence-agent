@@ -401,5 +401,5 @@ Each validated clinical scale in the agent serves a specific decision-making rol
 
 ---
 
-*Neurology Intelligence Agent -- Learning Guide: Foundations v1.0.0*
+*Neurology Intelligence Agent -- Learning Guide: Foundations v1.3.0*
 *HCLS AI Factory / GTC Europe 2026*

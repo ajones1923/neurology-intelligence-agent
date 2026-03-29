@@ -230,5 +230,5 @@ The Neurology Intelligence Agent demonstrates that domain-specific RAG architect
 
 ---
 
-*Neurology Intelligence Agent -- White Paper v1.0.0*
+*Neurology Intelligence Agent -- White Paper v1.3.0*
 *HCLS AI Factory / GTC Europe 2026*
