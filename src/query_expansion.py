@@ -184,7 +184,7 @@ ENTITY_ALIASES: Dict[str, str] = {
     "1p19q": "1p/19q codeletion",
     "EGFR": "epidermal growth factor receptor",
     "PCNSL": "primary CNS lymphoma",
-    "GBM": "glioblastoma",
+    "GBM": "glioblastoma",  # noqa: F601
     "WHO": "World Health Organization",
     "TMZ": "temozolomide",
     "SRS": "stereotactic radiosurgery",
